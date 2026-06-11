@@ -68,12 +68,12 @@ export default function Header() {
                 Eventos
               </Link>
 
-
-              <li>
-                <a href="#contacto" className="hover:text-[#8bc34a] transition">
-                  Contacto
-                </a>
-              </li>
+              <Link
+                to="/contacto"
+                className="hover:text-[#8bc34a] transition"
+              >
+                Contacto
+              </Link>
             </ul>
           </nav>
 
@@ -139,12 +139,13 @@ export default function Header() {
                 </li>
 
                 <li>
-                  <a
-                    href="#contacto"
+                  <Link
+                    to="/contacto"
                     onClick={() => setMenuOpen(false)}
                   >
                     Contacto
-                  </a>
+                  </Link>
+
                 </li>
               </ul>
             </nav>
