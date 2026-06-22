@@ -125,6 +125,26 @@ const eventos = [
         </section>
       </main>
 
+      {/* CTA */}
+      <section className="bg-slate-50">
+        <div className="max-w-4xl mx-auto px-6 py-20 text-center">
+
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">
+            Agendemos una Reunión
+          </h2>
+
+          <a
+            href="https://calendly.com/inversiones-paredones"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-[#8bc34a] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#7cb342] transition"
+          >
+            Agendemos una Reunión
+          </a>
+
+        </div>
+      </section>
+
       <Footer />
     </>
   );

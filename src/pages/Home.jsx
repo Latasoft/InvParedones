@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import inversiones from "../assets/images/Inversiones.jpeg";
 import vision from "../assets/images/vision.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -35,12 +36,15 @@ export default function Home() {
                 >
                   Agendar Reunión
                 </a>
-                <a
-                  href="#contacto"
-                  className="text-center border border-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition"
-                >
-                  Contacto
-                </a>
+                
+                  <Link
+                    to="/contacto"
+                    className="text-center border border-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Contacto
+                  </Link>
+
               </div>
             </div>
 
@@ -193,6 +197,25 @@ export default function Home() {
 
   </div>
 </section>
+
+<hr className="max-w-7xl mx-auto border-slate-200" />
+<section className="py-16">
+  <div className="max-w-4xl mx-auto px-6 text-center">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+      Descubre qué nos diferencia
+    </h2>
+
+    <Link
+      to="/porque-nosotros"
+      className="inline-flex items-center mt-8 bg-[#8bc34a] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#7cb342] transition-all duration-300 shadow-lg hover:shadow-xl"
+    >
+      ¿Por qué nosotros?
+    </Link>
+
+  </div>
+</section>
+
       </main>
       <Footer />
     </>

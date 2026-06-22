@@ -41,9 +41,9 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
 
-    // CAMBIAR ESTOS DATOS
+    // Data de autenticación del correo electrónico
     $mail->Username   = 'inversiones.paredones@gmail.com';
-    $mail->Password   = 'ppxg robc izfr bvmu';
+    $mail->Password   = ''; 
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;

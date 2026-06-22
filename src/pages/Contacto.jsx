@@ -88,7 +88,7 @@ export default function Contacto() {
       }
 
       try {
-        const response = await fetch("http://localhost:8000/contacto.php", {
+        const response = await fetch("/contacto.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
