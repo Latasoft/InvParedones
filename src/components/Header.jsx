@@ -48,6 +48,13 @@ export default function Header() {
               </Link>
 
               <Link
+                to="/porque-nosotros"
+                className="hover:text-[#8bc34a] transition"
+              >
+                ¿Por qué nosotros?
+              </Link>
+
+              <Link
                 to="/gobierno-corporativo"
                 className="hover:text-[#8bc34a] transition"
               >
@@ -110,6 +117,17 @@ export default function Header() {
                     Sobre Nosotros
                   </Link>
                 </li>
+
+              <li>
+                <Link
+                  to="/porque-nosotros"
+                  className="hover:text-[#8bc34a] transition"
+                >
+                  ¿Por qué nosotros?
+                </Link>
+
+              </li>
+
 
                 <li>
                   <Link

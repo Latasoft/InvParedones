@@ -137,8 +137,8 @@ export default function Contacto() {
         {/* Hero */}
         <section className="bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#8bc34a] leading-tight">
-              Contacto
+            <h1 className="text-3xl sm:text-4xl md:text-3xl font-bold text-[#8bc34a] leading-tight">
+              Contacta a nuestros expertos en compra y venta de empresas
             </h1>
 
             <p className="mt-4 text-base md:text-lg text-slate-600 max-w-2xl leading-relaxed">
@@ -308,7 +308,7 @@ export default function Contacto() {
                       </p>
 
                       <p className="text-slate-600 break-all">
-                        inversiones.paredones@gmail.com
+                        contacto@invparedones.cl
                       </p>
                     </div>
                   </div>

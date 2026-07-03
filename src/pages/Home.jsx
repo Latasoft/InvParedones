@@ -15,16 +15,21 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-6 pt-8 md:pt-12 pb-16 md:pb-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-                Inversiones rentables,
-                <span className="block text-[#8bc34a]">
-                  asesoramiento confiable
-                </span>
-              </h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+            Compra y Venta de Empresas
+            <span className="block text-[#8bc34a]">
+              en Chile
+            </span>
+          </h1>
+          <p className="mt-3 text-lg font-semibold text-slate-700">
+            InvParedones
+          </p>
 
               <p className="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-                InvParedones es una firma enfocada en la compra, venta e inversión en empresas en Chile,
-                conectando a dueños de negocios con inversionistas y oportunidades reales.
+                InvParedones es una firma especializada en la compra, venta e inversión en empresas en Chile,
+                conectando a dueños de negocios con inversionistas y oportunidades reales. 
+                Conoce más sobre <Link to="/servicios" className="text-[#8bc34a] font-semibold underline">nuestros servicios</Link>  
+                o revisa <Link to="/porque-nosotros" className="text-[#8bc34a] font-semibold underline">por qué elegirnos</Link>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -51,7 +56,7 @@ export default function Home() {
             <div className="flex justify-center">
               <img
                 src={inversiones}
-                alt="Inversiones"
+                alt="Compra y venta de empresas en Chile"
                 className="w-full max-w-xl rounded-3xl shadow-2xl object-cover hover:scale-[1.02] transition duration-500"
               />
             </div>
@@ -84,7 +89,7 @@ export default function Home() {
             <div className="flex justify-center">
               <img
                 src={vision}
-                alt="Visión de la empresa"
+                alt="Asesoría para compra y venta de empresas"
                 className="w-full max-w-xl rounded-3xl shadow-2xl object-cover hover:scale-[1.02] transition duration-500"
               />
             </div>

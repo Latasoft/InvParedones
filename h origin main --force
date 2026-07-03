@@ -1,0 +1,28 @@
+[33mcommit 0e196f408a8f24612db72daa9f89eddcd25dbd55[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Santiago GZ <80967269+SantiagoGZ29@users.noreply.github.com>
+Date:   Thu Jun 11 12:36:47 2026 -0400
+
+    Update contacto.php
+
+[1mdiff --git a/contacto.php b/contacto.php[m
+[1mindex c78c41d..58e7b08 100644[m
+[1m--- a/contacto.php[m
+[1m+++ b/contacto.php[m
+[36m@@ -41,9 +41,8 @@[m [mtry {[m
+     $mail->Host       = 'smtp.gmail.com';[m
+     $mail->SMTPAuth   = true;[m
+ [m
+[31m-    // CAMBIAR ESTOS DATOS[m
+     $mail->Username   = 'inversiones.paredones@gmail.com';[m
+[31m-    $mail->Password   = 'ppxg robc izfr bvmu';[m
+[32m+[m[32m    $mail->Password   = '';[m
+ [m
+     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;[m
+     $mail->Port       = 587;[m
+[36m@@ -87,4 +86,4 @@[m [mtry {[m
+         "success" => false,[m
+         "message" => $e->getMessage()[m
+     ]);[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m

@@ -4,7 +4,12 @@ import {
   MapPin,
   ArrowRight,
 } from "lucide-react";
+
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+
 import logo from "../assets/images/Logo.jpeg";
+
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -62,11 +67,11 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="mailto:inversiones.paredones@gmail.com"
+                  href="mailto:contacto@invparedones.cl"
                   className="flex items-start gap-3 text-slate-600 hover:text-[#8bc34a] transition"
                 >
                   <Mail size={18} className="mt-0.5 flex-shrink-0" />
-                  <span>inversiones.paredones@gmail.com</span>
+                  <span>contacto@invparedones.cl</span>
                 </a>
               </li>
 
@@ -95,6 +100,34 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
+              
+              {/* Redes sociales */}
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/inversiones-paredones/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate-600 hover:text-[#8bc34a] transition"
+                  aria-label="LinkedIn InvParedones"
+                >
+                  <FaLinkedinIn size={18} className="flex-shrink-0" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/invparedones/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-slate-600 hover:text-[#8bc34a] transition"
+                  aria-label="Instagram InvParedones"
+                >
+                  <FaInstagram size={18} className="flex-shrink-0" />
+                  <span>Instagram</span>
+                </a>
+              </li>
 
             </ul>
           </div>
@@ -108,12 +141,17 @@ export default function Footer() {
             © {new Date().getFullYear()} InvParedones. Todos los derechos reservados.
           </span>
 
-          <span className="text-sm text-slate-500">
-            Desarrollado por{" "}
-            <span className="font-semibold text-black">
-              Latasoft
-            </span>
-          </span>
+        <span className="text-sm text-slate-500">
+          Desarrollado por{" "}
+          <a
+            href="https://latasoft.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-black hover:text-[#8bc34a] transition"
+          >
+            Latasoft.cl
+          </a>
+        </span>
 
         </div>
 

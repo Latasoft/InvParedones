@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { Link } from "react-router-dom";
+
 import tecnologia from "../assets/images/tecnologia.jpg";
 import turismo from "../assets/images/turismo.jpg";
 import inmobiliario from "../assets/images/inmobiliario.jpg";
@@ -55,9 +57,9 @@ export default function PorqueNosotros() {
         <section className="border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-6 py-10">
 
-            <h1 className="text-center text-5xl md:text-6xl font-bold text-[#8bc34a] max-w-4xl leading-tight mx-auto">
-              ¿Por qué nosotros?
-            </h1>
+          <h1 className="text-center text-5xl md:text-4xl font-bold text-[#8bc34a] max-w-4xl leading-tight mx-auto">
+            ¿Por qué elegir InvParedones para compra y venta de empresas?
+          </h1>
 
           </div>
         </section>
@@ -116,6 +118,27 @@ export default function PorqueNosotros() {
             ))}
           </div>
 
+        </section>
+
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-14">
+
+            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+              Conoce más sobre nuestra experiencia en
+              {" "}
+              <Link to="/quienes-somos" className="text-[#8bc34a] font-semibold underline">
+                quiénes somos
+              </Link>
+              {" "}
+              o revisa nuestros
+              {" "}
+              <Link to="/servicios" className="text-[#8bc34a] font-semibold underline">
+                servicios de compra y venta de empresas en Chile
+              </Link>,
+              donde detallamos nuestro enfoque en valorización, negociación e inversión en empresas.
+            </p>
+
+          </div>
         </section>
 
       </main>

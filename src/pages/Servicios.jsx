@@ -15,9 +15,11 @@ export default function Servicios() {
       {/* Hero */}
       <section className="border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-10">
-          <h1 className="text-[#8bc34a] md:text-5xl font-bold leading-tight">
-            Nuestros Servicios
+
+          <h1 className="text-[#8bc34a] text-3xl md:text-3xl font-bold leading-tight">
+            Servicios de compra, venta y valorización de empresas en Chile
           </h1>
+
         </div>
       </section>
 

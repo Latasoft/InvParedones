@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function SobreNosotros() {
   return (
@@ -13,11 +14,11 @@ export default function SobreNosotros() {
           <div className="max-w-7xl mx-auto px-6 py-20 md:py-20">
 
             <span className="inline-block border border-[#8bc34a] text-black px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
-              Sobre Nosotros
+              ¿Quiénes Somos?
             </span>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-[#8bc34a] max-w-4xl leading-tight">
-              Quiénes Somos
+            <h1 className="text-5xl md:text-4xl font-bold text-[#8bc34a] max-w-4xl leading-tight">
+              Firma especializada en compra y venta de empresas en Chile
             </h1>
 
             <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
@@ -41,6 +42,7 @@ export default function SobreNosotros() {
                 desde la evaluación y valorización de la empresa, hasta la
                 búsqueda de contrapartes, negociación y cierre de la
                 transacción.
+                Si quieres iniciar un proceso, puedes <Link to="/contacto" className="text-[#8bc34a] font-semibold underline">contactarnos aquí</Link>.
               </p>
 
             </div>
