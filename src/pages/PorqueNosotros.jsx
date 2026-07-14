@@ -1,3 +1,5 @@
+"use client";  
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -8,6 +10,16 @@ import turismo from "../assets/images/turismo.jpg";
 import inmobiliario from "../assets/images/inmobiliario.jpg";
 import retail from "../assets/images/retail.jpg";
 import agricultura from "../assets/images/agricultura.jpg";
+
+import { useState } from "react";
+import { ArrowRight, X } from "lucide-react";
+
+import surmodel from "../assets/images/surmodel.jpg";
+import BuildSync from "../assets/images/buildsync.jpg";
+import Latasoft from "../assets/images/latasoft.jpg";
+
+import Slider from "../components/slidder";
+import SliderOrganizaciones from "../components/slidderOrganizaciones";
 
 const rubros = [
   {
@@ -46,10 +58,67 @@ const rubros = [
       "Provenimos de familias vinculadas al sector agrícola, lo que nos entrega un conocimiento real del rubro. Esta cercanía nos permite evaluar, valorizar y negociar oportunidades con una visión de largo plazo y entendimiento operativo.",
   },
 ];
+
+const casosExito = [
+  {
+    id: 1,
+    empresa: "Surmodel",
+    imagen: surmodel,
+
+    titulo: "Búsqueda de inversionistas y expansión comercial",
+
+    descripcion:
+      "Apoyamos a Surmodel en la búsqueda de inversionistas, la postulación a 500 Startups Latam y la generación de reuniones con potenciales socios estratégicos. Se establecieron vínculos con inversionistas de Perú y Emiratos Árabes Unidos, fortaleciendo su proyección internacional.", 
+    desafio:
+      "Surmodel buscaba acelerar su crecimiento mediante la incorporación de inversionistas estratégicos y la generación de alianzas comerciales que impulsaran la expansión de su plataforma de búsqueda de trabajadores freelance y promotoras.",
+    solucion:
+      "Desde InvParedones lideramos la gestión de búsqueda de inversionistas y potenciales clientes corporativos. Se establecieron conversaciones con inversionistas de Perú y Emiratos Árabes Unidos, se coordinó la postulación de la startup a 500 Startups Latam y se gestionaron reuniones con potenciales inversionistas y empresas para explorar oportunidades de inversión y alianzas estratégicas.",
+    resultado:
+      "Surmodel amplió su red de contactos con actores relevantes del ecosistema de emprendimiento e inversión internacional, participó en un proceso de aceleración de alto nivel y logró generar oportunidades concretas de inversión y desarrollo comercial mediante reuniones estratégicas con empresas e inversionistas.",
+    tags: [
+      "Startups",
+      "Inversión",
+      "Internacionalización"
+    ]
+  },
+
+  {
+    id: 2,
+    empresa: "BuildSync",
+    imagen: BuildSync,
+    titulo: "Conexión con el ecosistema startup e industria",
+    descripcion: "Impulsamos la vinculación de BuildSync con el ecosistema de innovación chileno mediante Chrysalis PUCV y Draper Startup House, además de generar conexiones con empresas como Cementos Melón, Masisa y Anglo American para explorar oportunidades de negocio.",
+    desafio: "BuildSync, una startup enfocada en tecnología RFID para la detección de tuberías y fugas en proyectos de construcción e infraestructura, buscaba fortalecer su acceso al ecosistema de innovación, atraer inversionistas y generar vínculos con potenciales clientes corporativos del sector.",
+    solucion: "Desde InvParedones lideramos la búsqueda de inversionistas, la conexión con el ecosistema startup chileno y la vinculación con empresas estratégicas. Se gestionó el ingreso de BuildSync a la incubadora Chrysalis de la Pontificia Universidad Católica de Valparaíso, su incorporación al ecosistema de Draper Startup House en Viña del Mar y reuniones con compañías del sector como Cementos Melón, Masisa y Anglo American para explorar oportunidades de colaboración y desarrollo comercial.",
+    resultado: "BuildSync fortaleció su posicionamiento dentro del ecosistema de innovación en Chile, amplió su red de contactos con actores relevantes de la industria y estableció relaciones con empresas líderes del sector. Actualmente, sus fundadores desarrollan proyectos de construcción e infraestructura entre el sur de Chile y Brasil, consolidando la proyección internacional de la iniciativa.",
+    tags: [
+      "Startups",
+      "Innovación",
+      "Conexión con la industria"
+    ]
+  },
+
+ {
+    id: 3,
+    empresa: "Latasoft",
+    imagen: Latasoft,
+    titulo: "Internacionalización y desarrollo de negocios",
+    descripcion: "Apoyamos la expansión de Latasoft mediante rondas de negocios internacionales, integración al ecosistema de innovación y conexiones con empresas de Europa, Asia y Medio Oriente. El proceso culminó con una oferta de adquisición por parte de inversionistas de India y Perú, la cual fue rechazada por la empresa.",
+    desafio: "Latasoft buscaba acelerar su crecimiento comercial, fortalecer su presencia en el ecosistema de innovación y expandir sus oportunidades de negocio tanto en Chile como en mercados internacionales.",
+    solucion: "Desde InvParedones impulsamos la búsqueda de clientes, la integración al ecosistema de innovación y la generación de vínculos estratégicos con organizaciones y empresas nacionales e internacionales. Se gestionó la participación en rondas de negocios organizadas por ProChile y la Cámara Regional del Comercio de Valparaíso (CRCP), estableciendo reuniones con empresas de Perú, Bolivia, Colombia y México. Asimismo, se facilitó el ingreso a cámaras de comercio latinoamericanas y se promovieron conexiones con compañías internacionales como Latecoere (Francia), JR Metals (Japón) y Quiddiya City (Arabia Saudita). Además, se coordinó el acercamiento con potenciales compradores de capitales de India y Perú interesados en adquirir la empresa.",
+    resultado: "Latasoft consolidó una amplia red internacional de contactos comerciales e institucionales, fortaleció su posicionamiento dentro del ecosistema de innovación y abrió oportunidades de colaboración con organizaciones de distintos países. Como resultado de este proceso, la empresa recibió una propuesta de adquisición por parte de inversionistas de India y Perú, la cual fue evaluada y finalmente rechazada por decisión de sus fundadores, manteniendo la continuidad de su estrategia de crecimiento independiente.",
+    tags: ["Desarrollo de software", "Internacionalización", "Negocios internacionales"]
+  }
+];
+
+
+
 export default function PorqueNosotros() {
+  const [casoSeleccionado, setCasoSeleccionado] = useState(null);
   return (
     <>
       <Header />
+      <Slider />
 
       <main className="bg-gradient-to-b from-white to-slate-50">
 
@@ -117,8 +186,110 @@ export default function PorqueNosotros() {
               </article>
             ))}
           </div>
+       </section>
 
-        </section>
+          {/* Casos de éxito */}
+          <section className="max-w-7xl mx-auto px-6 py-20">
+
+            <div className="text-center mb-14">
+
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                Casos de éxito
+              </h2>
+
+              <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Conoce algunos proyectos donde hemos participado generando oportunidades
+                de inversión, expansión comercial y desarrollo estratégico para empresas
+                en distintos sectores.
+              </p>
+
+            </div>
+
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+              {casosExito.map((caso) => (
+
+                <article
+                  key={caso.id}
+                  className="group overflow-hidden rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+                >
+
+                  {/* Imagen */}
+                  <div className="relative h-64 overflow-hidden">
+
+                    <img
+                      src={caso.imagen}
+                      alt={caso.empresa}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+                    <div className="absolute bottom-6 left-6 right-6">
+
+                      <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#8bc34a] bg-white/90 px-3 py-1 rounded-full mb-3">
+                        Caso de éxito
+                      </span>
+
+                      <h3 className="text-3xl font-bold text-white">
+                        {caso.empresa}
+                      </h3>
+
+                    </div>
+
+                  </div>
+
+                  {/* Contenido */}
+                  <div className="p-7">
+
+                    <h4 className="text-xl font-bold text-slate-900 leading-snug">
+                      {caso.titulo}
+                    </h4>
+
+                    <p className="mt-4 text-slate-600 leading-relaxed line-clamp-8">
+                      {caso.descripcion}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mt-6">
+
+                      {caso.tags.map((tag) => (
+
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full bg-[#8bc34a]/10 text-[#6fa126] text-sm font-medium"
+                        >
+                          {tag}
+                        </span>
+
+                      ))}
+
+                    </div>
+
+                    {/* Botón */}
+                    <button
+                      onClick={() => setCasoSeleccionado(caso)}
+                      className="mt-8 inline-flex items-center gap-2 font-semibold text-[#8bc34a] hover:gap-4 transition-all duration-300"
+                    >
+
+                      Ver caso completo
+
+                      <ArrowRight
+                        size={18}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
+
+                    </button>
+
+                  </div>
+
+                </article>
+
+              ))}
+
+            </div>
+
+          </section>
 
         <section className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-14">
@@ -143,6 +314,71 @@ export default function PorqueNosotros() {
 
       </main>
 
+      {
+casoSeleccionado && (
+
+<div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-5">
+
+    <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+
+        <div className="flex justify-between items-center border-b p-8">
+
+            <h2 className="text-3xl font-bold">
+                Caso de éxito: {casoSeleccionado.empresa}
+            </h2>
+
+            <button onClick={() => setCasoSeleccionado(null)}>
+                <X />
+            </button>
+
+        </div>
+
+        <div className="p-8 space-y-10">
+
+            <section>
+
+                <h3 className="text-2xl font-bold mb-3 text-[#8bc34a]">
+                    Desafío
+                </h3>
+
+                <p className="text-slate-600 leading-relaxed">
+                    {casoSeleccionado.desafio}
+                </p>
+
+            </section>
+
+            <section>
+
+                <h3 className="text-2xl font-bold mb-3 text-[#8bc34a]">
+                    Solución
+                </h3>
+
+                <p className="text-slate-600 leading-relaxed">
+                    {casoSeleccionado.solucion}
+                </p>
+
+            </section>
+
+            <section>
+
+                <h3 className="text-2xl font-bold mb-3 text-[#8bc34a]">
+                    Resultado
+                </h3>
+
+                <p className="text-slate-600 leading-relaxed">
+                    {casoSeleccionado.resultado}
+                </p>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+)}
+      <SliderOrganizaciones />
       <Footer />
     </>
   );
